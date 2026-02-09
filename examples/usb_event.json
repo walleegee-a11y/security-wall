@@ -1,0 +1,10 @@
+{
+  "action": "usb",
+  "target": "KINGSTON_128GB",
+  "actor": "kim.jiho",
+  "host": "PC-01",
+  "metadata": {
+    "device_serial": "A1B2C3D4",
+    "department": "finance"
+  }
+}

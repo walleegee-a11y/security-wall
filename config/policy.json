@@ -1,0 +1,36 @@
+{
+  "defaults": {
+    "usb": "warn",
+    "web_upload": "warn",
+    "app_exec": "warn",
+    "print": "warn",
+    "file_backup": "allow",
+    "vuln_check": "allow"
+  },
+  "rules": [
+    {
+      "action": "usb",
+      "decision": "block",
+      "targets": ["*"],
+      "note": "기본 USB 사용 차단"
+    },
+    {
+      "action": "web_upload",
+      "decision": "block",
+      "targets": ["drive.google.com", "dropbox.com"],
+      "note": "외부 업로드 사이트 차단"
+    },
+    {
+      "action": "app_exec",
+      "decision": "block",
+      "targets": ["TeamViewer.exe", "AnyDesk.exe"],
+      "note": "원격제어 앱 차단"
+    },
+    {
+      "action": "print",
+      "decision": "warn",
+      "targets": ["*"],
+      "note": "출력 시 경고 및 워터마크 안내"
+    }
+  ]
+}
