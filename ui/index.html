@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Security Wall 관리자 콘솔 (프로토타입)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="app-kicker">Security Wall</p>
+        <h1>관리자 콘솔 (프로토타입)</h1>
+        <p class="app-subtitle">보안 경각심을 높이는 체크/알림 중심 대시보드</p>
+      </div>
+      <button class="primary">정책 업데이트</button>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <div class="card-header">
+          <h2>오늘의 보안 체크</h2>
+          <span class="badge warn">주의 필요 3</span>
+        </div>
+        <ul class="checklist">
+          <li>
+            <span class="check-title">USB 사용 점검</span>
+            <span class="check-status blocked">2건 차단</span>
+          </li>
+          <li>
+            <span class="check-title">웹 업로드 감시</span>
+            <span class="check-status warn">경고 5건</span>
+          </li>
+          <li>
+            <span class="check-title">프로그램 실행 제어</span>
+            <span class="check-status ok">이상 없음</span>
+          </li>
+          <li>
+            <span class="check-title">출력물 보안</span>
+            <span class="check-status warn">워터마크 4건</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>위반 이벤트 로그</h2>
+          <span class="badge">최근 24시간</span>
+        </div>
+        <table class="event-table">
+          <thead>
+            <tr>
+              <th>시간</th>
+              <th>사용자</th>
+              <th>행위</th>
+              <th>대상</th>
+              <th>결과</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>09:12</td>
+              <td>kim.jiho</td>
+              <td>USB 연결</td>
+              <td>KINGSTON_128GB</td>
+              <td><span class="pill blocked">차단</span></td>
+            </tr>
+            <tr>
+              <td>10:05</td>
+              <td>park.min</td>
+              <td>웹 업로드</td>
+              <td>drive.google.com</td>
+              <td><span class="pill blocked">차단</span></td>
+            </tr>
+            <tr>
+              <td>11:21</td>
+              <td>lee.sora</td>
+              <td>문서 출력</td>
+              <td>HP-Laser-3F</td>
+              <td><span class="pill warn">경고</span></td>
+            </tr>
+            <tr>
+              <td>13:40</td>
+              <td>cho.dong</td>
+              <td>프로그램 실행</td>
+              <td>AnyDesk.exe</td>
+              <td><span class="pill blocked">차단</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card span-2">
+        <div class="card-header">
+          <h2>정책 현황</h2>
+          <span class="badge">기본 템플릿 적용</span>
+        </div>
+        <div class="policy-grid">
+          <article>
+            <h3>정보유출 방지</h3>
+            <p>USB, 외부 업로드, 공유폴더 복사에 대해 차단 우선 정책.</p>
+            <ul>
+              <li>USB: 기본 차단</li>
+              <li>외부 업로드: 2개 사이트 차단</li>
+              <li>외부 메일 첨부: 경고 후 승인</li>
+            </ul>
+          </article>
+          <article>
+            <h3>민감정보 관리</h3>
+            <p>주요 키워드 기반 탐지 후 자동 암호화 및 알림.</p>
+            <ul>
+              <li>개인정보 12개 패턴 감시</li>
+              <li>기밀 키워드 8개 적용</li>
+              <li>반출 승인 워크플로</li>
+            </ul>
+          </article>
+          <article>
+            <h3>취약점 점검</h3>
+            <p>OS 업데이트, 백신, 방화벽 상태 주간 리포트.</p>
+            <ul>
+              <li>점검 대상 PC: 40대</li>
+              <li>주의 항목: 6건</li>
+              <li>권고 조치: 3건 진행 중</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>에이전트 상태</h2>
+          <span class="badge ok">정상 38</span>
+        </div>
+        <div class="agent-status">
+          <div>
+            <span class="label">최신 업데이트</span>
+            <strong>오늘 08:30</strong>
+          </div>
+          <div>
+            <span class="label">미설치</span>
+            <strong>2대</strong>
+          </div>
+          <div>
+            <span class="label">정책 동기화 실패</span>
+            <strong>1대</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>알림 센터</h2>
+          <span class="badge warn">새 알림 4</span>
+        </div>
+        <ol class="alerts">
+          <li>경고: 외부 클라우드 업로드 시도가 5건 있습니다.</li>
+          <li>안내: USB 차단 정책에 대한 사용자 교육 필요.</li>
+          <li>점검: 방화벽 비활성 PC 2대 발견.</li>
+          <li>공유: 주간 리포트가 생성되었습니다.</li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>
